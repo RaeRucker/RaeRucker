@@ -50,7 +50,3 @@ The project monitors:
 **CompTIA Security+**
 **Active Secret Security Clearance**
 **Combat Veteran**
-
----
-
-I use GitHub to publish sanitized versions of tools and engineering work that can be reused outside the environments they were originally built for.
