@@ -28,6 +28,14 @@ My work is primarily infrastructure-focused: understanding how systems interact,
 
 ## Featured Work
 
+### [AKS LogicMonitor Monitoring](https://github.com/RaeRucker/AKS-LogicMonitor-Monitoring)
+
+A reusable AKS monitoring and operations reference covering LogicMonitor Container Monitoring deployment, Helm configuration, Argus tuning, resource filtering, and API throttling mitigation.
+
+The project covers:
+
+`AKS` · `Kubernetes` · `Helm` · `LogicMonitor` · `Argus` · `Observability` · `RBAC` · `API Throttling`
+
 ### [PowerShell SQL Server Health Check](https://github.com/RaeRucker/PowerShell-SQL-HealthCheck)
 
 A reusable PowerShell health-check framework for SQL Server environments with automated collection, HTML reporting, configurable thresholds, SQL instance discovery, and scheduled daily email delivery.
