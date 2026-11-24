@@ -1,67 +1,52 @@
 # Rae Rucker
 
-Cloud infrastructure engineer focused on Azure: backup and disaster recovery, monitoring and incident response, governance, and the automation that keeps operations repeatable.
-
-I work at a Microsoft partner managed-services provider, operating Azure across multiple client tenants. The projects below are built from that production work. Each one separates what I've done in production from what the repository adds, and states what has been validated.
+Systems analyst working in Azure at a Microsoft partner managed services provider. Most of my day is backup and disaster recovery, monitoring, patching and automation across client environments.
 
 [LinkedIn](https://www.linkedin.com/in/rae-rucker-929048273) · Email: `ruckerrae@gmail.com` · [Resume](https://drive.google.com/file/d/1bEpmB6ZcP0LhFx0GISZg7OY1lBAlKqeq/view?usp=sharing)
 
 ---
 
-## Engineering focus
+## Projects
 
-- Azure infrastructure and operations: networking, identity, Key Vault, governance
-- Backup, disaster recovery, and recovery testing
-- Monitoring, alert design, and incident response
-- Infrastructure as code (Bicep) and PowerShell automation
-- AKS monitoring and troubleshooting
+Each of these is something I've built or run in production. Client names and details are removed.
 
----
-
-## Featured projects
-
-| Project | Engineering problem | Stack | Outcome |
-|---|---|---|---|
-| [azure-disaster-recovery-engineering](https://github.com/RaeRucker/azure-disaster-recovery-engineering) | Backups that are untested, deletable, and not tied to recovery objectives | Recovery Services, Site Recovery, Bicep | Tiered RPO/RTO design, immutable GRS vaults as code, regional failover exercise |
-| [cloud-observability-incident-response](https://github.com/RaeRucker/cloud-observability-incident-response) | Alerts that are noisy, mis-severitied, or silent | Azure Monitor, KQL, Bicep, Logic Apps | Tested alert catalog with runbooks, noise controls, and a full simulated incident review |
-| [enterprise-infrastructure-automation](https://github.com/RaeRucker/enterprise-infrastructure-automation) | One-off scripts with no tests or safeguards | PowerShell 7, Pester, Resource Graph, Microsoft Graph | 11-function module, read-only by default, 72 tests on synthetic data |
-
-Also: [AKS-LogicMonitor-Monitoring](https://github.com/RaeRucker/AKS-LogicMonitor-Monitoring) (LM Container Helm deployment and API-throttling tuning) and [PowerShell-SQL-HealthCheck](https://github.com/RaeRucker/PowerShell-SQL-HealthCheck) (multi-instance SQL Server health reporting).
-
----
-
-## Professional experience highlights
-
-- Operate Azure for multiple client tenants through delegated (GDAP/B2B) access
-- Designed Tier 1-4 backup policies with immutable, geo-redundant vaults for a client audit, including a 4-hour RPO tier
-- Built a daily Azure Backup report (Logic App, Resource Graph, managed identity) now running in production
-- Run Azure Site Recovery failover tests and wrote the DR runbook and report for client leadership
-- Audited VMs across the client base for VM series retirements and led upgrade outreach
-- Onboarded an AKS environment to enterprise monitoring in under one business day
-- Reduced Azure spend by about 17% (storage optimization, lifecycle management) and alert-driven workload by about 25%
-
----
-
-## Technical capabilities
-
-| Area | Technologies |
+| Project | What it is |
 |---|---|
-| Cloud platform | Microsoft Azure |
+| [azure-backup-daily-report](https://github.com/RaeRucker/azure-backup-daily-report) | Logic App that emails a daily Azure Backup health report covering failed jobs, vault settings, policy coverage, databases and storage growth |
+| [azure-immutable-backup-vaults](https://github.com/RaeRucker/azure-immutable-backup-vaults) | Immutable Recovery Services vaults and tiered backup policies in Bicep, with a gated lock step |
+| [azure-site-recovery-failover-testing](https://github.com/RaeRucker/azure-site-recovery-failover-testing) | How I run Site Recovery test failovers, with a runbook, readiness check script and report template |
+| [azure-vm-retirement-audit](https://github.com/RaeRucker/azure-vm-retirement-audit) | PowerShell script that finds VMs on retiring series and suggests what to move them to |
+| [PowerShell-SQL-HealthCheck](https://github.com/RaeRucker/PowerShell-SQL-HealthCheck) | Health report for multiple SQL Server instances, emailed as HTML |
+| [AKS-LogicMonitor-Monitoring](https://github.com/RaeRucker/AKS-LogicMonitor-Monitoring) | Getting AKS clusters into LogicMonitor with Helm, plus tuning to stop API throttling |
+
+---
+
+## Work highlights
+
+- Manage Azure across multiple client tenants through GDAP and B2B access
+- Set up immutable Recovery Services vaults and tiered backup policies for an audit
+- Built a daily backup report Logic App that's now running in production
+- Run Azure Site Recovery test failovers and write the DR runbook and test report for leadership
+- Audited VMs for series retirements and price changes and recommended upgrades for each one
+- Got an AKS environment onboarded to LogicMonitor in under a business day
+- Cut Azure spend by about 17% through storage cleanup and lifecycle rules, and cut alert-driven work by about 25%
+
+---
+
+## Tools I use
+
+| Area | Tools |
+|---|---|
+| Cloud | Microsoft Azure |
 | Infrastructure as code | Bicep |
-| Automation | PowerShell, Python, Bash |
-| Containers and orchestration | Kubernetes, AKS, Helm |
-| Identity and security | Microsoft Entra ID, Azure RBAC, Azure Policy, Key Vault, Conditional Access |
-| Monitoring | Azure Monitor, Log Analytics (KQL), LogicMonitor |
-| Resilience | Azure Backup, Azure Site Recovery, SQL Server failover clustering |
+| Scripting | PowerShell, Python, Bash |
+| Containers | Kubernetes, AKS, Helm |
+| Identity and security | Entra ID, Azure RBAC, Azure Policy, Key Vault, Conditional Access |
+| Monitoring | Azure Monitor, Log Analytics and KQL, LogicMonitor |
+| Backup and DR | Azure Backup, Azure Site Recovery, SQL Server failover clustering |
 | DevOps | Git, GitHub Actions, Pester, pytest |
 | Systems | Windows Server, Active Directory, VMware, DNS, networking |
 
 ---
 
-## How I work
-
-I treat infrastructure the way I'd want to inherit it: defined in code, tested before it changes anything, observable when it fails, and documented well enough that the next engineer can recover it without me. Where a control or a recovery target hasn't been proven in a live environment, the repository says so.
-
----
-
-Microsoft Certified: Azure Administrator Associate (AZ-104) · CompTIA Security+ · Microsoft Fundamentals certifications · Active Secret security clearance · Combat veteran
+AZ-104 Azure Administrator · CompTIA Security+ · Microsoft Fundamentals certs · Active Secret clearance · Army National Guard combat veteran
